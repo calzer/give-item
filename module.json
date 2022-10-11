@@ -1,35 +1,21 @@
 {
-    "name": "give-item",
-    "title": "Give item to another player",
-    "description": "A module to allow players to give an item to another player",
-    "author": "Sepichat",
-    "authors": [],
-    "url": "https://github.com/Sepichat/FoundryVTT-GiveItem",
-    "bugs": "https://github.com/Sepichat/FoundryVTT-GiveItem/issues",
-    "flags": {},
-    "version": "1.11.0",
-    "minimumCoreVersion": "9.238",
-    "compatibleCoreVersion": "9.238",
-    "scripts": [],
-    "esmodules": [
-        "scripts/main.js"
-    ],
-    "styles": [
-      "./styles/give-item.css"
-    ],
-    "languages": [],
-    "packs": [],
-    "system": [
-      "dnd5e",
-      "pf2e",
-      "pf1",
-      "wfrp4e"
-    ],
-    "dependencies": [],
-    "socket": true,
-    "manifest": "https://raw.githubusercontent.com/Sepichat/FoundryVTT-GiveItem/main/module.json",
-    "download": "https://github.com/Sepichat/FoundryVTT-GiveItem/releases/download/v1.11.0/module.zip",
-    "protected": false,
-    "coreTranslation": false,
-    "library": false
+  "title": "Give item to another player",
+  "description": "A module to allow players to give an item to another player",
+  "url": "https://github.com/Sepichat/FoundryVTT-GiveItem",
+  "bugs": "https://github.com/Sepichat/FoundryVTT-GiveItem/issues",
+  "version": "1.11.0",
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/give-item.css"
+  ],
+  "socket": true,
+  "manifest": "https://raw.githubusercontent.com/Sepichat/FoundryVTT-GiveItem/main/module.json",
+  "download": "https://github.com/Sepichat/FoundryVTT-GiveItem/releases/download/v1.11.0/module.zip",
+  "id": "give-item",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  }
 }

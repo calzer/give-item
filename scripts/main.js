@@ -45,7 +45,7 @@ Hooks.once('setup', async function () {
       const currentActorId = packet.currentActorId;
       data.actor = game.actors.get(actorId);
       data.currentActor = game.actors.get(currentActorId);
-      if (data.actor.isOwner) {
+      if (data.actor.isOwner && game.user.isGM==false) {
           if (type === 'request') {
               receiveTrade(data);
           }
