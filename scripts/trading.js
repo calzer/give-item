@@ -116,7 +116,7 @@ function receiveItem({currentItem, quantity, actor}) {
         if (isNaN(duplicatedItem.quantity)) {
             updatedQuantity = existingItem.system.quantity.value + quantity;
             updateItem = {
-                "data.quantity.value": updatedQuantity
+                "data.quantity": updatedQuantity
             };
         } else {
             updatedQuantity = existingItem.system.quantity + quantity;
