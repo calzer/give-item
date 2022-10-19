@@ -1,8 +1,8 @@
 {
   "title": "Give item to another player",
-  "description": "A module to allow players to give an item to another player",
-  "url": "https://github.com/Sepichat/FoundryVTT-GiveItem",
-  "bugs": "https://github.com/Sepichat/FoundryVTT-GiveItem/issues",
+  "description": "A module to allow players to give an item to another player (v10 test)",
+  "url": "https://github.com/Txus5012/FoundryVTT-GiveItem",
+  "bugs": "https://github.com/Txus5012/FoundryVTT-GiveItem/issues",
   "version": "1.11.0",
   "esmodules": [
     "scripts/main.js"
@@ -11,8 +11,8 @@
     "styles/give-item.css"
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/Sepichat/FoundryVTT-GiveItem/main/module.json",
-  "download": "https://github.com/Sepichat/FoundryVTT-GiveItem/releases/download/v1.11.0/module.zip",
+  "manifest": "https://raw.githubusercontent.com/Txus5012/FoundryVTT-GiveItem/main/module.json",
+  "download": "https://github.com/Txus5012/FoundryVTT-GiveItem/releases/download/v1.11.0/module.zip",
   "id": "give-item",
   "compatibility": {
     "minimum": "10",
