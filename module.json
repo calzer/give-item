@@ -11,8 +11,8 @@
     "styles/give-item.css"
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/Txus5012/FoundryVTT-GiveItem/main/module.json",
-  "download": "https://github.com/Txus5012/FoundryVTT-GiveItem/releases/download/v1.11.0/module.zip",
+  "manifest": "https://github.com/Txus5012/FoundryVTT-GiveItem/releases/download/v1.11.0/module.json",
+  "download": "https://github.com/Txus5012/FoundryVTT-GiveItem/releases/download/v1.11.0/give-item.zip",
   "id": "give-item",
   "compatibility": {
     "minimum": "10",
