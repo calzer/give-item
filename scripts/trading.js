@@ -106,7 +106,7 @@ function giveCurrency({quantity, actor, alt}) {
 function receiveItem({currentItem, quantity, actor}) {
     const duplicatedItem = duplicate(currentItem);
     if (isNaN(duplicatedItem.quantity)) {
-        duplicatedItem.quantity.value = quantity;
+        duplicatedItem.quantity = quantity;
     } else {
         duplicatedItem.quantity = quantity;
     }
