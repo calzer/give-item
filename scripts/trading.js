@@ -57,9 +57,9 @@ function giveItem({currentItem, quantity, actor}) {
 function giveCurrency({quantity, actor, alt}) {
     if (game.system.id === "wfrp4e") {
         const currentCurrency = actor.items.filter(item => item.type === "money");
-        const currentGC = currentCurrency.find(currency => currency.name === "Gold Crown");
-        const currentSS = currentCurrency.find(currency => currency.name === "Silver Shilling");
-        const currentBP = currentCurrency.find(currency => currency.name === "Brass Penny");
+        const currentGC = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.GC"));
+        const currentSS = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.SS"));
+        const currentBP = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.BP"));
         const updateGC = {
             "data.quantity.value": currentGC.system.quantity.value - quantity.gc
         };
@@ -134,9 +134,9 @@ function receiveItem({currentItem, quantity, actor}) {
 function receiveCurrency({actor, quantity, alt}) {
     if (game.system.id === "wfrp4e") {
         const currentCurrency = actor.items.filter(item => item.type === "money");
-        const currentGC = currentCurrency.find(currency => currency.name === "Gold Crown");
-        const currentSS = currentCurrency.find(currency => currency.name === "Silver Shilling");
-        const currentBP = currentCurrency.find(currency => currency.name === "Brass Penny");
+        const currentGC = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.GC"));
+        const currentSS = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.SS"));
+        const currentBP = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.BP"));
         const updateGC = {
             "data.quantity.value": currentGC.system.quantity.value + quantity.gc
         };
