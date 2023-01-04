@@ -115,7 +115,7 @@ function giveCurrency() {
     const actor = game.actors.get(playerId);
     const currentCurrency = currentActor.system.currency;
     if (pp > currentCurrency.pp || gp > currentCurrency.gp || ep > currentCurrency.ep || sp > currentCurrency.sp || cp > currentCurrency.cp) {
-      return ui.notifications.error(`You cannot offer more currency than you have`);
+      return ui.notifications.error(`You cannot offer more money than you have`);
     } else {
       game.socket.emit('module.give-item', {
         data: {quantity: {pp, gp, ep, sp, cp}},
@@ -125,7 +125,7 @@ function giveCurrency() {
       });
     }
   },
-    {acceptLabel: "Offer Currency", filteredPCList, currency: true}
+    {acceptLabel: "Offer Money", filteredPCList, currency: true}
   );
   d.render(true);
 }
@@ -138,7 +138,7 @@ function giveMainCurrencyPF1E() {
     const actor = game.actors.get(playerId);
     const currentCurrency = currentActor.system.currency;
     if (pp > currentCurrency.pp || gp > currentCurrency.gp || sp > currentCurrency.sp || cp > currentCurrency.cp) {
-      return ui.notifications.error(`You cannot offer more currency than you have`);
+      return ui.notifications.error(`You cannot offer more money than you have`);
     } else {
       game.socket.emit('module.give-item', {
         data: {quantity: {pp, gp, sp, cp}},
@@ -148,7 +148,7 @@ function giveMainCurrencyPF1E() {
       });
     }
   },
-    {acceptLabel: "Offer Currency", filteredPCList, currency: true}
+    {acceptLabel: "Offer Money", filteredPCList, currency: true}
   );
   d.render(true);
 }
@@ -161,7 +161,7 @@ function giveAltCurrencyPF1E() {
     const actor = game.actors.get(playerId);
     const currentCurrency = currentActor.system.altCurrency;
     if (pp > currentCurrency.pp || gp > currentCurrency.gp || sp > currentCurrency.sp || cp > currentCurrency.cp) {
-      return ui.notifications.error(`You cannot offer more currency than you have`);
+      return ui.notifications.error(`You cannot offer more money than you have`);
     } else {
       game.socket.emit('module.give-item', {
         data: {quantity: {pp, gp, sp, cp}, alt: true},
@@ -171,7 +171,7 @@ function giveAltCurrencyPF1E() {
       });
     }
   },
-    {acceptLabel: "Offer Currency", filteredPCList, currency: true}
+    {acceptLabel: "Offer Money", filteredPCList, currency: true}
   );
   d.render(true);
 }
@@ -183,11 +183,11 @@ function giveCurrencyWFRP4E() {
   const d = new PlayerDialog(({playerId, gc, ss, bp}) => {
     const actor = game.actors.get(playerId);
     const currentCurrency = currentActor.items.filter(item => item.type === "money");
-    const currentGC = currentCurrency.find(currency => currency.name === "Gold Crown");
-    const currentSS = currentCurrency.find(currency => currency.name === "Silver Shilling");
-    const currentBP = currentCurrency.find(currency => currency.name === "Brass Penny");
+    const currentGC = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.GC"));
+    const currentSS = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.SS"));
+    const currentBP = currentCurrency.find(currency => currency.name === game.i18n.localize("NAME.BP"));
     if (gc > currentGC.quantity.value || ss > currentSS.quantity.value || bp > currentBP.quantity.value) {
-      return ui.notifications.error(`You cannot offer more currency than you have`);
+      return ui.notifications.error(`You cannot offer more money than you have`);
     } else {
       game.socket.emit('module.give-item', {
         data: {quantity: {gc, ss, bp}},
@@ -197,7 +197,7 @@ function giveCurrencyWFRP4E() {
       });
     }
   },
-    {acceptLabel: "Offer Currency", filteredPCList, currency: true}
+    {acceptLabel: "Offer Money", filteredPCList, currency: true}
   );
   d.render(true);
 }
